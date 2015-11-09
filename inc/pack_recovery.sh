@@ -11,7 +11,7 @@ if [ $recovery ] && [ -f out/target/product/$product/recovery.img ]; then
     # pack it with our prebuilt recovery package prebuilts
     cd $recoverypath
     zip -r tmp.zip * >> $helperpath/../compile.log 2>compile.err
-    cd $helperpath/..
+    croot
 
     mkdir -p $settings_dir_final
 

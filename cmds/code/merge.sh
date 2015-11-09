@@ -7,7 +7,6 @@ if [[ $verbose ]]; then
     echo ""
 fi
 
-home=$PWD
 while read -r line; do
 
     # Trim line
@@ -30,7 +29,6 @@ while read -r line; do
     #private=${splline[3]} # only needed for pushing
 
     # Get to the project
-    cd $home
     cd $project
 
     if [[ $verbose ]]; then
@@ -69,8 +67,8 @@ while read -r line; do
         done
     fi
 
+    croot
 done < <(cat $helperpath/config/projects.conf)
-cd $home
 if [[ $verbose ]]; then
     echo -e "\e[1mAutomerge end\e[0m"
 fi

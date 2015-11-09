@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ $# -gt 0 ]; then
-  if [ $1 == "full" ] || [ $1 == "sync" ] || [ $1 == "merge" ] || [ $1 == "status" ]; then
+  if [ $1 == "full" ] || [ $1 == "sync" ] || [ $1 == "merge" ] || [ $1 == "status" ] || [ $1 == "push" ]; then
     cmdpath=$helperpath/cmds/code
     source $cmdpath/$1.sh
   else
