@@ -42,9 +42,15 @@ chmod 755 $helperpath/inc/*.sh
 chmod 755 $helperpath/lib/*.sh
 chmod 755 $helperpath/cmds/*.sh
 chmod 755 $helperpath/cmds/*/*.sh
+chmod 777 $helperpath/completion/*.sh
 if [ ! -e letscook ]; then
     ln -s $helperpath/inc/prepare.sh letscook
-    show_success "Symlink set."
+    show_success "Symlink for letscook set."
+fi
+
+if [ ! -e /etc/bash_completion.d/letscook.sh ]; then
+    sudo ln -s $helperpath/completion/letscook.sh /etc/bash_completion.d/letscook.sh
+    show_success "Bash auto_completion script for 'cook' installed."
 fi
 
 echo ""
