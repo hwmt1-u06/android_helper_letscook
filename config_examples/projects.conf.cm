@@ -1,0 +1,22 @@
+#################################################################################################################
+#
+# Project (Path)                        Local private branch            Remote(s) to merge from         Private Remote to push to
+# (Needed)                              (Needed)                        (Optional, use "-" to skip)     (Optional, use "-" to skip)
+#                                       Format: Remote[/branch][,...]
+
+android                                 cm-11.0                         github                          private
+bootable/recovery                       cm-11.0                         omnirom/android-4.4             private
+build                                   cm-11.0                         github                          private
+device/huawei/hwmt1_u06                 cm-11.0                         -                               private
+external/skia                           cm-11.0                         github                          private
+frameworks/av                           cm-11.0                         github                          private
+frameworks/base                         cm-11.0                         github                          private
+frameworks/native                       cm-11.0                         github                          private
+kernel/huawei/hwmt1_u06                 cm-11.0                         -                               private
+packages/apps/Settings                  cm-11.0                         github                          private
+packages/services/Telephony             cm-11.0                         github                          private
+prebuilts/gcc/linux-x86/arm/linaro-4.6  cm-11.0                         -                               private
+system/core                             cm-11.0                         github                          private
+vendor/cm                               cm-11.0                         github                          private
+vendor/google/gapps                     cm-11.0                         -                               private
+vendor/huawei                           cm-11.0                         -                               private

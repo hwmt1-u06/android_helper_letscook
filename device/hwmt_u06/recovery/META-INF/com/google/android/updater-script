@@ -1,0 +1,6 @@
+ui_print(" Installing TWRP 2.8.1.0-BangL for hwmt1_u06...");
+show_progress(1.000000, 0);
+set_progress(0.300000);
+package_extract_file("recovery.img", "/dev/block/mmcblk1p11");
+set_progress(1.000000);
+ui_print(" done. please reboot recovery now.");

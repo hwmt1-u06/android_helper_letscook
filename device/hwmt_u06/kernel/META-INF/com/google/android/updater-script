@@ -1,0 +1,13 @@
+ui_print("AROM-Kernel for Android 4.4 on Huawei Ascend Mate");
+ui_print("by ANGEL-Group");
+ui_print("");
+ui_print("Extracting files...");
+set_progress(1.000000);
+delete_recursive("/tmp/arom/");
+package_extract_dir("tmp", "/tmp");
+run_program("/sbin/busybox", "mount", "/system");
+set_perm(0, 0, 0700, "/tmp/arom/mkbootimg");
+set_perm(0, 0, 0700, "/tmp/arom/busybox");
+set_perm(0, 0, 0700, "/tmp/arom/unpackbootimg");
+set_perm(0, 0, 0700, "/tmp/arom/install.sh");
+run_program("/tmp/arom/install.sh");

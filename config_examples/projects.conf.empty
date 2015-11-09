@@ -1,0 +1,5 @@
+#################################################################################################################
+#
+# Project (Path)                        Local private branch            Remote(s) to merge from         Private Remote to push to
+# (Needed)                              (Needed)                        (Optional, use "-" to skip)     (Optional, use "-" to skip)
+#                                       Format: Remote[/branch][,...]

@@ -1,0 +1,3 @@
+post-build=lge/star_open_eu/star:4.0.4/IMM76L/LG-P990-P99030a.1211302332:user/release-keys
+post-timestamp=1356028931
+pre-device=p990
