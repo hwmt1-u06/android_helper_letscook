@@ -31,14 +31,11 @@ while read -r line; do
     # Get to the project
     cd $project
 
-    if [[ $verbose ]]; then
-        echo ""
-        echo -e "\e[1mproject: $project\e[0m"
-    fi
-
     # Push to private
     if [[ ! $private == "-" ]]; then
         if [[ $verbose ]]; then
+            echo ""
+            echo -e "\e[1mproject: $project\e[0m"
             echo "> pushing to $private/$branch..."
             git push $private $branch > /dev/null
         else

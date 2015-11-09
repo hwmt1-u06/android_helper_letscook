@@ -31,13 +31,13 @@ while read -r line; do
     # Get to the project
     cd $project
 
-    if [[ $verbose ]]; then
-        echo ""
-        echo -e "\e[1mproject: $project\e[0m"
-    fi
 
     # Merge from each remote
     if [[ ! $remotes == "-" ]]; then
+        if [[ $verbose ]]; then
+            echo ""
+            echo -e "\e[1mproject: $project\e[0m"
+        fi
         remotes=`echo $remotes | tr ',' ' '`
         for remote in $remotes; do
             if [ `echo $remote | grep -o '.*/.*'` ]; then
