@@ -1,5 +1,5 @@
 #!/bin/bash
-source $cmdpath/options.sh
+source $cmdpath/options.inc.sh
 
 if [[ $verbose ]]; then
     echo ""

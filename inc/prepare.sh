@@ -1,7 +1,7 @@
 #!/bin/bash
 cd $PWD
 helperpath="$(cd "$(dirname "${BASH_SOURCE[0]}")"&&pwd)"/helper # FIXME: this should get dynamic somehow
-source $helperpath/lib/output.sh
+source $helperpath/func/output.sh
 source $helperpath/config/settings.sh
 
 if [ $use_archfix ]; then

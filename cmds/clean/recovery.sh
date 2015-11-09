@@ -1,5 +1,6 @@
 #!/bin/bash
-source $cmdpath/options.sh
+source $cmdpath/options.inc.sh
+source $helperpath/func/clean.sh
 
 if [[ $verbose ]]; then
     echo ""
@@ -7,5 +8,4 @@ if [[ $verbose ]]; then
     echo ""
 fi
 
-source $helperpath/lib/clean.sh
 clean_recovery $product

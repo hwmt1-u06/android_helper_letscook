@@ -2,7 +2,7 @@
 
 verbose=1
 helperpath="$(cd "$(dirname "${BASH_SOURCE[0]}")"&&pwd)"/..
-source $helperpath/lib/output.sh
+source $helperpath/func/output.sh
 source $helperpath/config/settings.sh
 product=$settings_default_product
 recoverypath=$helperpath/device/$product/recovery

@@ -1,6 +1,5 @@
 #!/bin/bash
-
-source $helperpath/lib/copywmd5.sh
+source $helperpath/func/copywmd5.sh
 
 mkdir -p $settings_dir_final
 
@@ -31,5 +30,5 @@ if [[ -f $file_source ]]; then
     copywmd5 $file_source $file_target > /dev/null 2>compile.err
 
     # increase version number for next build
-    source $helperpath/lib/versioning_post.sh
+    source $helperpath/inc/versioning_post.sh
 fi

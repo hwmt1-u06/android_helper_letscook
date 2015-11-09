@@ -1,11 +1,11 @@
 #!/bin/bash
-source $cmdpath/options.sh
+source $cmdpath/options.inc.sh
 
 # get version informations about rom, recovery and kernel
 source $helperpath/inc/analyze.sh
 
 # get version numbers from last build
-source $helperpath/lib/versioning_pre.sh
+source $helperpath/inc/versioning_pre.sh
 
 # Prepare CCACHE
 export USE_CCACHE=$settings_ccache_use

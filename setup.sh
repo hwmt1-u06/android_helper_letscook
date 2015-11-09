@@ -1,7 +1,7 @@
 #!/bin/bash
 cd $PWD
 helperpath="$(cd "$(dirname "${BASH_SOURCE[0]}")"&&pwd)"
-source $helperpath/lib/output.sh
+source $helperpath/func/output.sh
 
 # Git config
 git config --global color.ui 'auto'
@@ -35,14 +35,16 @@ if [[ $fixed ]]; then
     show_warning "Review and edit the files in ./config/ !!!"
 fi
 
-chmod 755 $helperpath/config/settings.sh
-chmod 755 $helperpath/config/projects.conf
+chmod 755 $helperpath/config/*.sh
+chmod 644 $helperpath/config/*.conf
 chmod 755 $helperpath/*.sh
 chmod 755 $helperpath/inc/*.sh
-chmod 755 $helperpath/lib/*.sh
+chmod 755 $helperpath/func/*.sh
 chmod 755 $helperpath/cmds/*.sh
 chmod 755 $helperpath/cmds/*/*.sh
+chmod 755 $helperpath/cmds/*/*.inc.sh
 chmod 777 $helperpath/completion/*.sh
+
 if [ ! -e letscook ]; then
     ln -s $helperpath/inc/prepare.sh letscook
     show_success "Symlink for letscook set."

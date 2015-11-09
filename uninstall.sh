@@ -1,7 +1,7 @@
 #!/bin/bash
 cd $PWD
 helperpath="$(cd "$(dirname "${BASH_SOURCE[0]}")"&&pwd)"
-source $helperpath/lib/output.sh
+source $helperpath/func/output.sh
 
 if [ -e letscook ]; then
     rm letscook
