@@ -76,6 +76,6 @@ echo "$(( $kernel_version - 1 ))" > out/target/product/$product/obj/KERNEL_OBJ/.
 
 # this is needed if the build process is done over midnight ;)
 date=`date -u +%Y%m%d`
-hour=$( printf "%02d" $(( `date -u +%H` + 1 )) )
+hour=$( printf "%02d" $(( `date -u +%k` + 1 )) ) # FIXME: dirty fix for my timezone, get real timezone instead
 minute=`date -u +%M` # FIXME: this will not work. try to get the actual var from make instead (see /vendor/bliss or /vendor/carbon)
 time=$hour$minute
